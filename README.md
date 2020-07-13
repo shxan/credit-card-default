@@ -21,20 +21,20 @@ Additional feature engineering were done based on our contextual knowledge of th
 Threshold cutoff is determined to be 0.2307 by using the formula: Profit from true positive / (Profit from true positive + Absolute Loss from false negative). This formula works because profits and losses are linear in this case, and we could create a goal seek to maximize profit in more complicated cases.
 
 The objective function used is not AUC or accuracy as with traditional analytics projects. More accurately, it should be represented by: 
-    | Actual: no default | Actual: default
----- | ---- | ----
-Predicted: no default | $1500 | -$5000
-Predicted: default | $0 | $0
+|             | Actual: no default | Actual: default
+| ----------- | ------------------ | ---------------
+| Predicted: no default | $1500 | -$5000
+| Predicted: default | $0 | $0
 
 Data is split into 16000 in training dataset and 8000 in testing dataset.
 
 ### Stepwise Logit Regression 
 AIC is used as criterion
 
-    | Actual: no default | Actual: default
----- | ---- | ----
-Predicted: no default | 5239 | 770
-Predicted: default | 993 | 998
+|    | Actual: no default | Actual: default
+|---- | ---- | ----
+|Predicted: no default | 5239 | 770
+|Predicted: default | 993 | 998
 
 ![logit plot](/graphs/stepwise-logit-plot.png)
 ![logit lift](/graphs/stepwise-logit-lift.png)
@@ -43,10 +43,10 @@ Predicted: default | 993 | 998
 
 ### CART - Classification Tree  
 
-    | Actual: no default | Actual: default
----- | ---- | ----
-Predicted: no default | 4995 | 713
-Predicted: default | 1237 | 1055
+|    | Actual: no default | Actual: default
+|---- | ---- | ----
+|Predicted: no default | 4995 | 713
+|Predicted: default | 1237 | 1055
 
 ![ctree plot](/graphs/ctree.png)
 ![ctree lift](/graphs/ctree-lift.png)
@@ -54,10 +54,10 @@ Predicted: default | 1237 | 1055
 
 ### RPart
 
-    | Actual: no default | Actual: default
----- | ---- | ----
-Predicted: no default | 5937 | 1162
-Predicted: default | 295 | 606
+|    | Actual: no default | Actual: default
+|---- | ---- | ----
+|Predicted: no default | 5937 | 1162
+|Predicted: default | 295 | 606
 
 ![rpart leaves](/graphs/rpart-leaves.png)
 ![rpart error](/graphs/rpart-error.png)
@@ -65,10 +65,10 @@ Predicted: default | 295 | 606
 
 ### Random Forest
 
-    | Actual: no default | Actual: default
----- | ---- | ----
-Predicted: no default | 5831 | 1077
-Predicted: default | 401 | 691
+|    | Actual: no default | Actual: default
+|---- | ---- | ----
+|Predicted: no default | 5831 | 1077
+|Predicted: default | 401 | 691
 
 ![random forest importance](/graphs/random-forest-importance.png)
 ![random forest plot](/graphs/random-forest-plot.png)
@@ -77,10 +77,10 @@ Predicted: default | 401 | 691
 
 ### Gradient Boosting - XGBoost
 
-    | Actual: no default | Actual: default
----- | ---- | ----
-Predicted: no default | 6066 | 1392
-Predicted: default | 166 | 376
+|    | Actual: no default | Actual: default
+|---- | ---- | ----
+|Predicted: no default | 6066 | 1392
+|Predicted: default | 166 | 376
 
 ![xgboost plot](/graphs/xgboost.png)
 ![xgboost lift](/graphs/xgboost-lift.png)
